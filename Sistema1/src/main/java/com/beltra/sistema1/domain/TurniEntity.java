@@ -9,7 +9,7 @@ import java.sql.Time;
 import java.util.Objects;
 
 @Entity
-@Table(name = "turni", schema = "public", catalog = "ditta_trasporti")
+@Table(name = "turni")
 public class TurniEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

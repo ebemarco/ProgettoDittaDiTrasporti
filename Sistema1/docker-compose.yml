@@ -1,16 +1,23 @@
 version: '3.8'
 services:
   db:
-    image: postgres:14-alpine
-    container_name: db_postgres_progretto_psw
+    image: gvenzl/oracle-xe:21-slim
+    container_name: db_oracle_ditta_trasporti
     environment:
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: ditta_trasporti
+      ORACLE_PASSWORD: password
+      APP_USER: ditta_trasporti
+      APP_USER_PASSWORD: password
     ports:
-      - "5429:5432"
+      - "1521:1521"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - oracle_data:/opt/oracle/oradata
+      - ./oracle-init:/container-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
 
 volumes:
-  postgres_data:
+  oracle_data:

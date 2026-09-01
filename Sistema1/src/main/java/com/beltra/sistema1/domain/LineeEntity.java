@@ -6,7 +6,7 @@ import jakarta.xml.bind.annotation.XmlAttribute;
 import java.util.Objects;
 
 @Entity
-@Table(name = "linee", schema = "public", catalog = "ditta_trasporti")
+@Table(name = "linee")
 public class LineeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

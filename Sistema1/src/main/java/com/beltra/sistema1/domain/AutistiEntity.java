@@ -6,7 +6,7 @@ import jakarta.xml.bind.annotation.XmlTransient;
 import java.util.Objects;
 
 @Entity
-@Table(name = "autisti", schema = "public", catalog = "ditta_trasporti")
+@Table(name = "autisti")
 public class AutistiEntity {
     @Basic
     @Column(name = "matricola", nullable = false, length = 5)

@@ -1,3 +1,5 @@
+-- OBSOLETO: non più usato da docker-compose.yml dopo la migrazione a Oracle (vedi Sistema1/oracle-init/).
+-- Schema PostgreSQL storico, mantenuto solo come riferimento.
 --
 -- PostgreSQL database dump
 --

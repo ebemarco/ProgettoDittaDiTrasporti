@@ -5,9 +5,8 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "autobus", schema = "public", catalog = "ditta_trasporti")
+@Table(name = "autobus")
 public class AutobusEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "targa", nullable = false, length = 10)
     private String targa;

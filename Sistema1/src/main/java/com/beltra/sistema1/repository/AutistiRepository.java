@@ -29,7 +29,7 @@ public interface AutistiRepository extends ListCrudRepository<AutistiEntity, Int
 
 
     @Modifying
-    @Query(value = "INSERT INTO autisti (matricola, nome, cognome, telefono, id_utente) VALUES (:matricola, :nome, :cognome, :telefono, (select id from utenti order by id desc limit 1) )", nativeQuery = true)
+    @Query(value = "INSERT INTO autisti (matricola, nome, cognome, telefono, id_utente) VALUES (:matricola, :nome, :cognome, :telefono, (select id from utenti order by id desc fetch first 1 row only) )", nativeQuery = true)
     void inserisciAutista(@Param("matricola") String matricola,
                           @Param("nome") String nome,
                           @Param("cognome") String cognome,
