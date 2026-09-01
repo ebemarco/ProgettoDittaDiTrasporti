@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+/DATABASE_POSTGRESQL
+DATABASE_POSTGRESQL
+/DATABASE

@@ -53,3 +53,7 @@ buildNumber.properties
 .classpath
 
 # End of https://www.toptal.com/developers/gitignore/api/java,maven
+
+/DATABASE_POSTGRESQL
+DATABASE_POSTGRESQL
+/DATABASE
