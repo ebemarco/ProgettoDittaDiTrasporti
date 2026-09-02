@@ -14,7 +14,7 @@
 	<name>Sistema1</name>
 	<description>Sistema1</description>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>21</java.version>
 		<springsecurity.version>5.1.5.RELEASE</springsecurity.version>
 	</properties>
 	<dependencies>
@@ -71,13 +71,24 @@
 
 	</dependencies>
 
+	<!-- Esplicito che backend è la cartella di source per i sorgenti Java e le risorse -->
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <sourceDirectory>backend/src/main/java</sourceDirectory>
+    <resources>
+        <resource>
+            <directory>backend/src/main/resources</directory>
+        </resource>
+    </resources>
+
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <mainClass>com.beltra.sistema1.Sistema1Application</mainClass>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 
 </project>

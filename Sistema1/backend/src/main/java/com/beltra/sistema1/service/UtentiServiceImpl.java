@@ -6,7 +6,6 @@ import com.beltra.sistema1.repository.AutistiRepository;
 import com.beltra.sistema1.repository.UtentiRepository;
 
 import com.beltra.sistema1.utils.InputUtente;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,14 +16,18 @@ import java.util.Optional;
 @Service
 public class UtentiServiceImpl implements UtentiService {
 
-    @Autowired
-    private AutistiRepository autistiRepository;
+    private final AutistiRepository autistiRepository;
 
-    @Autowired
-    private UtentiRepository utentiRepository;
+    private final UtentiRepository utentiRepository;
 
-    @Autowired
-    private TurniService turniService;
+    private final TurniService turniService;
+
+
+    UtentiServiceImpl(AutistiRepository autistiRepository, UtentiRepository utentiRepository, TurniService turniService) {
+        this.autistiRepository = autistiRepository;
+        this.utentiRepository = utentiRepository;
+        this.turniService = turniService;
+    }
 
 
     @Override
@@ -58,11 +61,8 @@ public class UtentiServiceImpl implements UtentiService {
     @Override
     public UtentiEntity getUtenteById(int id) {
         Optional<UtentiEntity> utente = utentiRepository.findById(id);
-
-        if(utente.isPresent())
-            return utente.get();
-        else
-            return null;
+        
+        return utente.isPresent() ? utente.get() : null;
     }
 
     @Override
@@ -103,6 +103,10 @@ public class UtentiServiceImpl implements UtentiService {
         else
             System.out.println("Utente non eliminabile\n");
     }
+
+
+
+    
 
     @Override
     @Transactional

@@ -1,8 +1,6 @@
 package com.beltra.sistema1.service;
 
 import com.beltra.sistema1.domain.TurniEntity;
-import com.beltra.sistema1.repository.TurniRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,7 +26,7 @@ public interface TurniService {
 
 
     /** Elimina tutti i turni relativi ad un determinato utente.<br>
-     *  Purtoppo questa funzione serve all'admin per poter eliminare
+     *  Purtroppo questa funzione serve all'admin per poter eliminare
      *  un determinato utente, però l'utente, si riferisce ad 1 determinato
      *  autista (utente 1 ----> 1 autista), ma l'autista ha dei riferimenti
      *  nella tabella turni.

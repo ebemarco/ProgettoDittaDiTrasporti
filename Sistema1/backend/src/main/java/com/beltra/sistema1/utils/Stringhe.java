@@ -28,24 +28,4 @@ public class Stringhe {
             Map.entry("dicembre",   MESI.DICEMBRE.ordinal() )
             );
 
-     /*
-
-    public static final Map<String, String> MESI = Map.ofEntries(
-            Map.entry("gennaio", "01"),
-            Map.entry("febbraio", "02"),
-            Map.entry("marzo", "03"),
-            Map.entry("aprile", "04"),
-            Map.entry("maggio", "05"),
-            Map.entry("giugno", "07"),
-            Map.entry("luglio", "07"),
-            Map.entry("agosto", "08"),
-            Map.entry("settembre", "09"),
-            Map.entry("ottobre", "10"),
-            Map.entry("novembre", "11"),
-            Map.entry("dicembre", "12")
-    );
-
-         */
-
-
 }

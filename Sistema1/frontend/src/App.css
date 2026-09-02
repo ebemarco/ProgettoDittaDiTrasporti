@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* To make my UI a bit more spacious, I add a top margin to Bootstrap’s container classes */
+nav + .container, nav + .container-fluid {
+  margin-top: 20px;
+} 

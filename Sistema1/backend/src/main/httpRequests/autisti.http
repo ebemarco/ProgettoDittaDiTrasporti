@@ -1,3 +1,9 @@
+# Ottenimento di tutti gli autisti
+GET http://localhost:8080/ditta/api/autisti
+
+###
+
+
 # Amministratore
 GET http://localhost:8080/ditta/api/autisti/1
 
@@ -8,9 +14,26 @@ GET http://localhost:8080/ditta/api/autisti/2
 
 ###
 
+
+# Creazione di un nuovo autista
+POST http://localhost:8080/ditta/api/autisti
+Accept: application/json
+Content-Type: application/json
+
+{
+"matricola": "12148",
+"nome" : "Giovanni",
+"cognome" : "Rossi",
+"telefono" : "5555555555",
+"username" : "GIOVANNI",
+"password" : "prova_password_scarsa"
+}
+
+###
+
 # Modifica di un determnato autista dato il suo ID:
 # TODO: funziona solo se l'id del path è uguale all'id del RequestBody
-PUT http://localhost:8080/ditta/api/autisti/8
+PUT http://localhost:8080/ditta/api/autisti/6
 Accept: application/json
 Content-Type: application/json
 
@@ -19,7 +42,7 @@ Content-Type: application/json
 "matricola": "12347",
 "nome" : "Philippo",
 "cognome" : "Girlandaio",
-"telefono" : "3697499999",
+"telefono" : "4444444444",
 
 
 "username" : "FILETTO",

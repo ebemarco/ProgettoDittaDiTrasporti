@@ -1,0 +1,28 @@
+{
+    // Usare IntelliSense per informazioni sui possibili attributi.
+    // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
+    // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Sistema1Application",
+            "request": "launch",
+            "mainClass": "com.beltra.sistema1.Sistema1Application",
+            "projectName": "Sistema1"
+        },
+        {
+            "type": "java",
+            "name": "Sistema2",
+            "request": "launch",
+            "mainClass": "com.beltra.sistema2.Sistema2",
+            "projectName": "Sistema2"
+        }
+    ]
+}
